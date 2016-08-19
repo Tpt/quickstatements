@@ -1,0 +1,33 @@
+{
+	"name": "tpt/quickstatements+",
+	"description": "",
+	"require": {
+		"php": ">=5.5",
+		"addwiki/wikibase-api": "~0.7.0",
+		"guzzlehttp/oauth-subscriber": "~0.3",
+		"silex/silex": "~2.0",
+		"twig/twig": "~1.24",
+		"symfony/twig-bridge": "~3.1",
+		"firebase/php-jwt": "~4.0",
+		"monolog/monolog": "~1.20",
+		"data-values/common": "~0.3",
+		"data-values/geo": "~1.1",
+		"data-values/number": "~0.7",
+		"data-values/time": "~0.8"
+	},
+	"require-dev": {
+		"mediawiki/mediawiki-codesniffer": "~0.7",
+		"phpunit/phpunit": "~4.8"
+	},
+	"autoload": {
+		"psr-4": {
+			"QuickStatements\\": "src/"
+		}
+	},
+	"scripts": {
+		"test": [
+			"phpcs",
+			"phpunit"
+		]
+	}
+}

@@ -1,0 +1,19 @@
+{% extends "template.twig" %}
+{% block body %}
+	<form method="POST" action="{{ path( 'qs-post' ) }}" role="form" class="form-horizontal">
+		<fieldset>
+			<legend>Import statements</legend>
+			<div class="form-group">
+				<label for="description" class="col-lg-2 control-label">Statements: </label>
+				<div class="col-lg-10">
+					<textarea name="tsv" id="tsv" required="required" rows="30" cols="60" class="form-control" >{{ tsv|e }}</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-lg-offset-2 col-lg-10">
+					<input class="btn btn-primary" type="submit" value="Upload" {% if not  user %}disabled title="You should authorize quick-statements+ before importing statements"{%  endif %} /> <span>(Warning: the upload may take more than one minute !)</span>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+{% endblock %}
